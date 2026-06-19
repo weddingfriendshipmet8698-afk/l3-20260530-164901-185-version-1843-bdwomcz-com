@@ -1,0 +1,53 @@
+
+:root {
+  color-scheme: dark;
+}
+html, body {
+  font-family: Inter, "Noto Sans SC", system-ui, sans-serif;
+  background: #020617;
+}
+body {
+  min-height: 100vh;
+}
+.poster {
+  background-image: radial-gradient(circle at top left, rgba(255,255,255,.18), transparent 26%), radial-gradient(circle at bottom right, rgba(255,255,255,.14), transparent 30%), linear-gradient(135deg, var(--c1), var(--c2));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.12), inset 0 -20px 60px rgba(0,0,0,.35);
+}
+.poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.12) 50%, rgba(0,0,0,.4) 100%);
+  pointer-events: none;
+}
+.movie-card .poster {
+  aspect-ratio: 3 / 4;
+}
+.poster-featured .poster {
+  aspect-ratio: 4 / 3;
+}
+.poster-mini .poster {
+  aspect-ratio: 4 / 5;
+}
+.poster-related .poster {
+  aspect-ratio: 3 / 4;
+}
+.player-overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+.player-shell video {
+  width: 100%;
+  background: #000;
+}
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .search-bar select, .search-bar button {
+    width: 100%;
+  }
+}
